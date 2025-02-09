@@ -1,5 +1,5 @@
 # 🎟️ Flask QR Code Ticketing System
-
+🔗 get your ticket: https://legendxtalk.onrender.com/
 ## 📌 Project Overview
 This project is a **QR Code-based ticketing system** for the **LegendsXtalk** event, built with **Flask** and **Firebase Realtime Database**. It allows users to:
 - **Register** for an event and generate a **QR code ticket**.
@@ -90,9 +90,9 @@ http://127.0.0.1:5000/
 ### **Admin Panel**
 | Method | Endpoint       | Description |
 |--------|---------------|-------------|
-| `POST` | `/users`      | Secure admin login |
-| `GET`  | `/users?search=<query>` | Search users |
-| `DELETE` | `/delete_user/<id>` | Delete user by Firebase ID |
+| `POST` | `/usddssehjjhjrs`      | Secure admin login |
+| `GET`  | `/usdsdsddsercdccs?search=<query>` | Search users |
+| `DELETE` | `/dcsdelcsdcete_usecdsr/<id>` | Delete user by Firebase ID |
 | `POST` | `/send_emails` | Send bulk emails to all users |
 
 ---
@@ -112,6 +112,7 @@ http://127.0.0.1:5000/
 📧 **Email**: [abdssamad.abkhar22@gmail.com](mailto:abdssamad.abkhar22@gmail.com)  
 🔗 **LinkedIn**: [Connect with me](https://www.linkedin.com/in/abakhar-abdessamad-735b18176/)  
 📍 **Event Location**: [Salle Ahmed Boukmakh, Tanger](https://maps.app.goo.gl/SgTbTMuVYfcs8z366)  
+
 
 ---
 
