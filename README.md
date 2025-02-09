@@ -9,13 +9,13 @@ This project is a **QR Code-based ticketing system** for the **LegendsXtalk** ev
 - **Filter users** in real-time with search functionality.
 
 ## 🚀 Features
-✅ **User Registration** – Participants can register for the event and generate a unique QR code ticket.
-✅ **QR Code Generation** – A unique QR code is created for each registered user.
-✅ **Ticket Validation** – Organizers can scan QR codes to verify tickets.
-✅ **Firebase Realtime Database** – All registrations are stored securely in Firebase.
-✅ **Admin Panel** – Organizers can view, search, and manage registrations.
-✅ **Delete Users** – Admins can delete a user from the database by ID.
-✅ **Email Notifications** – Automatic email confirmation for registered users (optional).
+#### ✅ **User Registration** – Participants can register for the event and generate a unique QR code ticket.
+#### ✅ **QR Code Generation** – A unique QR code is created for each registered user.
+#### ✅ **Ticket Validation** – Organizers can scan QR codes to verify tickets.
+#### ✅ **Firebase Realtime Database** – All registrations are stored securely in Firebase.
+#### ✅ **Admin Panel** – Organizers can view, search, and manage registrations.
+#### ✅ **Delete Users** – Admins can delete a user from the database by ID.
+#### ✅ **Email Notifications** – Automatic email confirmation for registered users (optional).
 
 ---
 
