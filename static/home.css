@@ -1,0 +1,92 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #0a0a0a;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+.header {
+    padding: 30px 20px;
+    background: black;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+.event-title {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+
+.event-title span {
+    background: linear-gradient(90deg, blue, green);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.event-date {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+/* Sections (About, Registration, Header, Footer) */
+.about, .registration, .header, .footer {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+.about h2, .registration h2 {
+    font-size: 2rem;
+    color: yellow;
+}
+
+/* Register Button */
+.register-button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background: linear-gradient(90deg, red, yellow);
+    color: black;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.register-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px yellow;
+}
+
+/* Footer */
+
+.footer-content p, .footer-content a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.footer-content a:hover {
+    color: yellow;
+}
+
+/* LinkedIn Icon */
+.footer-content i {
+    font-size: 1.5rem;
+    margin-right: 5px;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.footer-content a:hover i {
+    color: yellow;
+}

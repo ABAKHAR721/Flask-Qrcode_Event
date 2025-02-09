@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registered Users</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <script>
+        function searchUsers() {
+            let query = document.getElementById("searchInput").value.trim(); // 🔹 Trim to avoid spaces
+
+            console.log("🔍 Searching for:", query); // Debugging
+
+            fetch(`http://127.0.0.1:5000/test_filter?search=${query}`, { headers: { "X-Requested-With": "XMLHttpRequest" } })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error("Network response was not ok");
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    console.log("📌 Filtered users:", data); // Debugging
+
+                    let tableBody = document.getElementById("userTableBody");
+                    tableBody.innerHTML = ""; // Clear table
+
+                    if (data.length === 0) {
+                        tableBody.innerHTML = "<tr><td colspan='6' style='text-align:center;'>Aucun résultat trouvé</td></tr>";
+                        return;
+                    }
+
+                    data.forEach(user => {
+                        let row = document.createElement("tr");
+                        row.className = user.status === "scanned" ? "scanned" : "not-scanned";
+
+                        row.innerHTML = `
+                            <td>${user.fullname}</td>
+                            <td>${user.phone}</td>
+                            <td>${user.email}</td>
+                            <td>${user.ticket_category}</td>
+                            <td>${user.payment}</td>
+                            <td>${user.status}</td>
+                        `;
+                        tableBody.appendChild(row);
+                    });
+                })
+                .catch(error => console.error("❌ Error fetching users:", error));
+        }
+    </script>
+</head>
+<body>
+    <h1>📋 Registered Users</h1>
+
+    <!-- Real-Time Search Bar -->
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search users..." onkeyup="searchUsers()">
+    </div>
+    <div>
+        <p>number of users : {{nbr}}</p>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Full Name</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>Ticket Category</th>
+                <th>Payment</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody id="userTableBody">
+            {% for user in users %}
+            <tr class="{{ 'scanned' if user.status == 'scanned' else 'not-scanned' }}">
+                <td>{{ user.fullname }}</td>
+                <td>{{ user.phone }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.ticket_category }}</td>
+                <td>{{ user.payment }}</td>
+                <td>{{ user.status }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="/" class="home-button">🏠 Home</a>
+</body>
+</html>

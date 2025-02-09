@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LegendXtalk - Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            overflow-x: hidden;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #111;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 50px;
+            text-align: left;
+            flex-wrap: wrap;
+            flex-grow: 1;
+        }
+        .hero-content {
+            max-width: 50%;
+        }
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        .hero .highlight {
+            background: linear-gradient(90deg, blue, yellow);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: bold;
+        }
+        .btn, .btnh {
+            display: inline-block;
+            background: linear-gradient(90deg, blue, yellow);
+            padding: 10px 20px;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .hero-image img {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            margin-right: 200px;
+            margin-top: 50px;
+            border-radius: 50%;
+        }
+        footer {
+            background-color: #111;
+            padding: 20px;
+            text-align: center;
+            color: white;
+            font-size: 14px;
+        }
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .footer-section {
+            flex: 1;
+            margin: 10px;
+            text-align: center;
+        }
+        .footer-section h3 {
+            margin-bottom: 10px;
+            color: yellow;
+        }
+        .footer-section p, .footer-section a {
+            color: white;
+            text-decoration: none;
+        }
+        .footer-section a:hover {
+            color: yellow;
+        }
+        .social-icons, .social-icons-club {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        .social-icons a, .social-icons-club a {
+            color: white;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+        .social-icons a:hover, .social-icons-club a:hover {
+            color: yellow;
+        }
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+            .hero-content {
+                max-width: 100%;
+                padding: 20px;
+            }
+            .hero-image img {
+                margin: 20px auto;
+                max-width: 80%;
+            }
+            nav {
+                flex-direction: column;
+                text-align: center;
+            }
+            .btnh {
+                display: none;
+            }
+            .social-icons, .social-icons-club {
+                flex-direction: row;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">The Legends</div>
+            <a href="/register" class="btnh">Register Now</a>
+        </nav>
+    </header>
+    
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="event-title">🎤 Welcome to <span class="highlight">LegendsXtalk.</span></h1>
+            <p class="event-date">📅 February 16, 2025 | 📍  <a style="text-decoration: none;color: #fff;" href="https://maps.google.com/?q=Salle+Ahmed+Boukmakh,+Tanger" target="_blank"> <strong>Salle Ahmed Boukmakh, Tanger (click to see location)</strong></a></p>
+            <p>LegendXtalk is an inspiring conference where industry experts share knowledge, insights, and experiences. Join us for an unforgettable experience!</p>
+            <a href="/register" class="btn">Register Now</a>
+        </div>
+        <div class="hero-image">
+            <a href="https://www.instagram.com/thelgdclub.fstt/" target="_blank" rel="noopener noreferrer">
+                <img src="/static/logo.jpeg" alt="TIGERS Neon Logo">
+            </a>
+        </div>
+    </section>
+    
+    {% include 'footer.html' %}
+</body>
+</html>

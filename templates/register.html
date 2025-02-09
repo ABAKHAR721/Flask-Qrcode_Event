@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LegendsXtalk - Register</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+<body>
+    <h1 class="title">Register for LegendsXtalk</h1>
+    
+    <form action="/register" method="post">
+        <!-- Full Name & Phone in One Row -->
+        <div class="form-row">
+            <input type="text" name="fullname" id="fullname" placeholder="Full Name" required>
+            <input type="tel" name="phone" id="phone" placeholder="Phone" required>
+        </div>
+
+        <!-- Address & Ticket Selection in One Row -->
+        <div class="form-row">
+            <input type="email" name="email" id="address" placeholder="email" required>
+
+            <select name="ticket_category" required>
+                <option value="" disabled selected>Select Ticket Category</option>
+                <option value="VIP">Row 1-2 (VIP) – 50 MAD</option>
+                <option value="Premium">Row 3 (Premium) – 30 MAD</option>
+                <option value="Classique">Other rows (Classique) – FREE</option>
+            </select>
+        </div>
+
+        <!-- Payment Method -->
+        <div class="payment-section">
+            <h2>🔹 Payment Method</h2>
+            <div class="payment-method">
+                <label>
+                    <input type="radio" name="payment" value="Cash" required> Cash (Available)
+                </label>
+                <label style="color: gray;">
+                    <input type="radio" name="payment" value="Bank Transfer" disabled> Bank Transfer (Not Available)
+                </label>
+            </div>
+        </div>
+
+        <!-- Button Centered -->
+        <div class="button-container">
+            <button type="submit">Get Your Ticket</button>
+            <a href="/" class="home-button">Home</a>
+        </div>
+    </form>
+</body>
+
+{% include 'footer.html' %}
+</html>

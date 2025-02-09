@@ -1,0 +1,84 @@
+/* Table Styles */
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Table Headers */
+thead {
+    background: linear-gradient(90deg, blue,yellow);
+    color: black;
+    font-weight: bold;
+}
+
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+}
+
+/* Scanned Users - Highlighted Green */
+.scanned {
+    background-color: rgba(0, 255, 0, 0.2);
+    color: limegreen;
+    font-weight: bold;
+}
+
+/* Not Scanned Users - Highlighted Red */
+.not-scanned {
+    background-color: rgba(255, 0, 0, 0.2);
+    color: red;
+    font-weight: bold;
+}
+
+/* Home Button */
+.home-button {
+    display: block;
+    margin: 20px auto;
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    background: linear-gradient(90deg, red, yellow);
+    text-decoration: none;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: fit-content;
+}
+
+.home-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px yellow;
+}
+
+
+/* Footer */
+
+.footer-content p, .footer-content a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.footer-content a:hover {
+    color: yellow;
+}
+
+/* LinkedIn Icon */
+.footer-content i {
+    font-size: 1.5rem;
+    margin-right: 5px;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.footer-content a:hover i {
+    color: yellow;
+}

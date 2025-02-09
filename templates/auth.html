@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organizer Login</title>
+    <link rel="stylesheet" href="/static/auth.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+<body>
+    <h1>🔐 Organizer Login</h1>
+    <p>Enter the password to access the QR Code Scanner.</p>
+
+    <form method="post">
+        <input type="password" name="password" placeholder="Enter Password" required>
+        <button type="submit">Enter</button>
+    </form>
+
+    {% if error %}
+        <p class="error">{{ error }}</p>
+    {% endif %}
+</body>
+</html>

@@ -1,0 +1,358 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color:black;
+    color: white;
+    text-align: center;
+    margin: 5;
+    padding: 0;
+    animation: fadeIn 1s ease-in-out;
+    text-decoration: none;
+}
+
+/* Form Styling */
+form {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 25px;
+    border-radius: 12px;
+    display: inline-block;
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2);
+    width: 50%;
+    text-align: left;
+}
+
+/* Grid Layout for Inputs */
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.form-row input, .form-row select {
+    width: 48%;
+    padding: 12px;
+    border: 2px solid red;
+    border-radius: 6px;
+    font-size: 1rem;
+    text-align: center;
+    background: black;
+    color: white;
+}
+
+/* Payment Section */
+.payment-section {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.payment-method {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.payment-method label {
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Button */
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+button {
+    background: linear-gradient(90deg, red, yellow);
+    color: black;
+    font-weight: bold;
+    border: none;
+    padding: 15px 25px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px yellow;
+}
+/* QR Code Styling */
+img {
+    margin-top: 20px;
+    width: 220px;
+    height: 220px;
+    border: 5px solid yellow;
+    border-radius: 12px;
+    animation: pulse 2s infinite alternate;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    form {
+        width: 80%;
+    }
+    
+    .form-row {
+        flex-direction: column;
+    }
+
+    .form-row input, .form-row select {
+        width: 100%;
+    }
+}
+
+
+/* Scanner Page Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #0a0a0a;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Title Styling */
+.title {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    background: linear-gradient(90deg, blue, green);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textGlow 2s infinite alternate;
+    margin-top: 20px;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #ccc;
+}
+
+/* Scanner Container */
+.scanner-container {
+    width: 80%;
+    max-width: 500px;
+    margin: auto;
+    border: 5px solid red;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 15px red;
+    animation: pulse 2s infinite alternate;
+}
+
+/* Video Scanner */
+video {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Result Box */
+.result-box {
+    margin-top: 20px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2);
+}
+
+/* Success & Error Messages */
+.success {
+    color: limegreen;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.error {
+    color: red;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Animations */
+@keyframes textGlow {
+    0% { text-shadow: 0 0 10px red; }
+    100% { text-shadow: 0 0 20px yellow; }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); box-shadow: 0 0 15px red; }
+    100% { transform: scale(1.05); box-shadow: 0 0 25px yellow; }
+}
+
+
+/* Home Button */
+.home-button {
+    display: block;
+    margin: 15px auto;
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    background: linear-gradient(90deg, red, yellow);
+    text-decoration: none;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: fit-content;
+}
+
+.home-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px yellow;
+}
+
+
+/* Ticket Status Messages */
+.success {
+    color: limegreen;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.warning {
+    color: yellow;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.error {
+    color: red;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+
+/* Table Styles */
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Table Headers */
+thead {
+    background: linear-gradient(90deg,blue, yellow);
+    color: black;
+    font-weight: bold;
+}
+
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+}
+
+/* Scanned Users - Highlighted Green */
+.scanned {
+    background-color: rgba(0, 255, 0, 0.2);
+    color: limegreen;
+    font-weight: bold;
+}
+
+/* Not Scanned Users - Highlighted Red */
+.not-scanned {
+    background-color: rgba(255, 0, 0, 0.2);
+    color: red;
+    font-weight: bold;
+}
+
+/* Home Button */
+.home-button {
+    display: block;
+    margin: 20px auto;
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    background: linear-gradient(90deg, red, yellow);
+    text-decoration: none;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: fit-content;
+}
+
+.home-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px yellow;
+}
+
+/* Search Bar */
+.search-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.search-container input {
+    width: 50%;
+    padding: 10px;
+    border: 2px solid red;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-align: center;
+    background: black;
+    color: white;
+    transition: 0.3s ease-in-out;
+}
+
+.search-container input:focus {
+    border-color: yellow;
+    box-shadow: 0 0 10px yellow;
+}
+
+/* Table Row Styling */
+.scanned {
+    background-color: rgba(0, 255, 0, 0.2);
+    color: limegreen;
+    font-weight: bold;
+}
+
+.not-scanned {
+    background-color: rgba(255, 0, 0, 0.2);
+    color: red;
+    font-weight: bold;
+}
+
+
+/* Footer */
+
+.footer-content p, .footer-content a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.footer-content a:hover {
+    color: yellow;
+}
+
+/* LinkedIn Icon */
+.footer-content i {
+    font-size: 1.5rem;
+    margin-right: 5px;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.footer-content a:hover i {
+    color: yellow;
+}
+
+.footer {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <title>Your Ticket</title>
+</head>
+<body>
+    <h2>Registration Successful!</h2>
+    <p>✅ You are now registered for LegendsXtalk.</p>
+    <p>🎟 Screenshot your QR Code and present it at the event.</p>
+    <img src="{{ qr_code }}" alt="Your QR Code">
+    <p>Your Ticket ID: <b>{{ hash_value }}</b></p>
+
+    <a href="/" class="home-button">Home</a>
+</body>
+
+
+{% include 'footer.html' %}
+
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scan QR Code - LegendsXtalk</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <h1 class="title">🎟 LegendsXtalk Ticket Verification</h1>
+    <p class="subtitle">Organisers: Scan a participant’s QR code to verify their ticket.</p>
+
+    <div class="scanner-container">
+        <video id="scanner"></video>
+    </div>
+
+    <button onclick="switchCamera()">🔄 Switch Camera</button>
+
+    <div class="result-box">
+        <h2>Verification Result</h2>
+        <p id="result">Scan a QR code to see the result here.</p>
+    </div>
+
+    <script src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
+    <script>
+        let scanner = new Instascan.Scanner({ video: document.getElementById('scanner') });
+        let cameras = [];
+        let currentCameraIndex = 0;
+
+        scanner.addListener('scan', function(content) {
+            fetch(`/verify?hash=${content}`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.status === "success") {
+                        document.getElementById("result").innerHTML = 
+                            `<span class="success">✅ ${data.message} ✅</span>`;
+                    } else if (data.status === "already_scanned") {
+                        document.getElementById("result").innerHTML = 
+                            `<span class="warning">⚠️ ${data.message} ⚠️</span>`;
+                    } else {
+                        document.getElementById("result").innerHTML = 
+                            `<span class="error">❌ ${data.message} ❌</span>`;
+                    }
+                });
+        });
+
+        Instascan.Camera.getCameras().then(availableCameras => {
+            if (availableCameras.length > 0) {
+                cameras = availableCameras;
+                startCamera();
+            }
+        }).catch(e => console.error(e));
+
+        function startCamera() {
+            scanner.start(cameras[currentCameraIndex]);
+            document.getElementById('scanner').style.transform = (currentCameraIndex === 1) ? "scaleX(-1)" : "scaleX(1)";
+        }
+
+        function switchCamera() {
+            if (cameras.length > 1) {
+                currentCameraIndex = (currentCameraIndex + 1) % cameras.length;
+                startCamera();
+            }
+        }
+    </script>
+</body>
+{% include 'footer.html' %}
+</html>

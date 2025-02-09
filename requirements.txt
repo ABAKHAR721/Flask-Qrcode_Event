@@ -1,0 +1,8 @@
+flask
+qrcode[pil]
+flask_cors
+requests
+# pymongo[srv]
+firebase-admin
+pandas 
+openpyxl
